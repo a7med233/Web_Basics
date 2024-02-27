@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sticky Pad</title>
+  </head>
+
+  <body class="app-container">
+    <header class="header">
+      <div class="header-nav-desktop" data-testid="header-desktop">
+        <a href="/">
+          <img class="logo" src="../images/logo.svg" alt="logo" />
+        </a>
+        <div class="header-nav">
+          <a class="link-underline" href="#">tasks</a>
+          <a class="link-underline" href="#">about</a>
+        </div>
+        <div class="button-group">
+          <a class="button-secondary" href="#">support</a>
+          <a class="button-primary" href="#">contact us</a>
+        </div>
+      </div>
+
+      <div class="header-nav-mobile" data-testid="header-mobile">
+        <a href="/">
+          <img class="logo" src="../images/logo.svg" alt="logo" />
+        </a>
+
+        <input id="menu-toggle" type="checkbox" />
+        <label class="menu-button-container" for="menu-toggle">
+          <div class="menu-button"></div>
+        </label>
+        <div class="drop-menu">
+          <div class="header-nav">
+            <a class="link-underline" href="#">tasks</a>
+            <a class="link-underline" href="#">about</a>
+          </div>
+          <div class="button-group">
+            <a class="button-secondary" href="#">support</a>
+            <a class="button-primary" href="#">contact us</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-container">
+      <div class="notes-app">
+        <div class="notes-header">
+          <h1 class="title-h1">THINGS TO DO</h1>
+          <button class="button-primary button-with-icon" id="addNoteBtn"><span class="plus-icon"></span>add note</button>
+        </div>
+        <div class="button-group" id="filterButtons">
+          <button id="allFilterBtn" class="medium-button button-secondary active" data-filter-state="all">All notes (<span>0</span>)</button>
+          <button id="activeFilterBtn" class="medium-button button-secondary" data-filter-state="active">Active (<span>0</span>)</button>
+          <button id="completedFilterBtn" class="medium-button button-secondary" data-filter-state="completed">Completed (<span>0</span>)</button>
+        </div>
+        <div class="notes-list" id="noteList"></div>
+      </div>
+    </main>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <form class="form" id="noteForm">
+          <div class="field-group">
+            <label class="form-label" for="title">Title</label>
+            <input class="form-control" name="title" id="modalTitle" />
+          </div>
+          <div class="field-group">
+            <label class="form-label" for="description">Description</label>
+            <textarea class="form-control" name="description" rows="10" id="modalText"></textarea>
+          </div>
+          <div class="button-group" id="modalButtons">
+            <button type="button" class="medium-button button-secondary" id="cancelForm">Cancel</button>
+            <button type="button" class="medium-button button-primary" id="saveForm">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <a href="/" class="footer-logo" data-testid="footer-logo">
+          <img class="logo" src="../images/logo.svg" alt="logo" />
+        </a>
+
+        <div class="footer-nav">
+          <a href="#" class="link-underline">Tasks</a>
+          <a href="#" class="link-underline">About</a>
+        </div>
+        <div class="footer-nav">
+          <a href="#" class="link-underline">Terms & Conditions</a>
+          <a href="#" class="link-underline">Privacy Policy</a>
+        </div>
+
+        <div class="footer-nav" data-testid="footer-socials">
+          <p class="footer-socials">Our socials</p>
+          <div class="footer-icons">
+            <a href="#" target="_blank" rel="noopener noreferrer"><img src="../images/facebook.svg" alt="facebook" /></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><img src="../images/instagram.svg" alt="instagram" /></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><img src="../images/linkedin.svg" alt="linkedin" /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
