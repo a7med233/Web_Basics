@@ -1,0 +1,15 @@
+p:first-child{
+    color: red;
+}
+
+p:only-child{
+    color: white;
+}
+
+p:only-child{
+    background-color: blue;
+}
+
+:last-child{
+    color: blue;
+}

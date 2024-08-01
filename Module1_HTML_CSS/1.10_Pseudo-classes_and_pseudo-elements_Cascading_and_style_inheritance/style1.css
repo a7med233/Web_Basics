@@ -1,0 +1,8 @@
+.active{
+    background-color: yellow;
+}
+ 
+li:hover{
+    cursor: pointer;
+    background-color: red;
+}
