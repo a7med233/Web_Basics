@@ -1,0 +1,9 @@
+p{
+    line-height: 15px;
+    text-align: justify;
+}
+
+p::first-line{
+    text-indent: 10px;
+
+}

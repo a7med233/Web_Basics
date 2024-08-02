@@ -1,0 +1,9 @@
+div{
+    border: 4px;
+    border-style: dashed;
+    border-color: red;
+}
+
+p{
+    border-style: double;
+}

@@ -1,0 +1,25 @@
+body {
+    background-image: url('nix_logo.png');
+    background-size: cover; /* Optional: to cover the entire background */
+}
+
+p:first-child{
+    font-weight: bold;
+    color: #000000;
+    font-size: medium;
+    line-height: 175%;
+}
+
+p:only-child{
+    font-weight: bolder;
+    line-height: 150%;
+    font-size: medium;
+    color: green;
+}
+
+:last-child{
+    font-weight: lighter;
+    line-height: normal;
+    color: rgb(0, 0, 255);
+    font-size: medium;
+}

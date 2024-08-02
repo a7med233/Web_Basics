@@ -1,0 +1,10 @@
+p {
+    text-transform: capitalize;
+}
+
+p::first-letter{
+    text-transform: uppercase;
+}
+span {
+    text-decoration: line-through , underline , overline;
+}
