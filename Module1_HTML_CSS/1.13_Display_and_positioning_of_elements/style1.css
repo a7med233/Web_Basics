@@ -1,0 +1,42 @@
+body{
+    position: relative;
+    width: 1000px;
+    height: 100px;
+
+}
+div{
+    display: inline-block;
+    width: 85px;
+    height: auto;
+    border: solid 2px black;
+    padding: 2px;
+    position: absolute;
+}
+.one {
+    left: 550px;
+    border-left: none;
+}
+
+.two {
+    left: 178px;
+    border-left: none;
+}
+
+.three {
+    left: 460px;
+    border-left: none;
+}
+
+.four {
+    left: 0;
+    border-right: none; 
+}
+
+.five {
+    left: 370px;
+}
+
+.six {
+    top: 0;
+    left: 88px;
+}

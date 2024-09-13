@@ -1,0 +1,78 @@
+<html>
+<head>
+    <style>
+        /* Styling for text boxes */
+        span, div div {
+            border: solid 2px black;
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            text-align: center;
+            line-height: 50px; /* Centers text vertically */
+        }
+
+        /* Adding list markers (A., B., C.) using ::before */
+        .list-item::before, .list-item2::before, .list-item3::before {
+            display: inline-block;
+            font-weight: bold;
+            width: 20px;
+            vertical-align: top;
+            text-align: left;
+            margin-right: 10px;
+        }
+
+        .list-item::before {
+            content: "A.";
+        }
+
+        .list-item2::before {
+            content: "B.";
+        }
+
+        .list-item3::before {
+            content: "C.";
+        }
+
+        /* Vertical stacking for sections A and B */
+        .list-item span, .list-item2 div {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Horizontal alignment for section C */
+        .list-item3 span {
+            margin-right: 10px;
+            float: left;
+        }
+
+        /* Clear floats after section C */
+        .list-item3::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <!-- Section A -->
+    <div class="list-item">
+        <span>Text</span>
+        <span>Text</span>
+        <span>Text</span>
+    </div>
+
+    <!-- Section B -->
+    <div class="list-item2">
+        <div>Text</div>
+        <div>Text</div>
+        <div>Text</div>
+    </div>
+
+    <!-- Section C -->
+    <div class="list-item3">
+        <span>Text</span>
+        <span>Text</span>
+        <span>Text</span>
+    </div>
+</body>
+</html>
