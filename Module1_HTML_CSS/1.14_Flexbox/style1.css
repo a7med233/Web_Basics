@@ -1,0 +1,22 @@
+.flex-container{
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+}
+
+.item1{
+    order: 2;
+}
+.item2{
+    order: 4;
+}
+.item3{
+    order: 1;
+}
+.item4{
+    order: 5;
+}
+
+.item5{
+    order: 3;
+}
