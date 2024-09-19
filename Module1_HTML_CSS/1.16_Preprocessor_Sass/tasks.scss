@@ -1,0 +1,53 @@
+//task1
+$primary-color: #3498db;
+
+.background {
+  background-color: $primary-color;
+}
+
+
+//task2 
+$padding-size: 10px;
+
+.box {
+  padding: $padding-size;
+}
+
+
+//task3 
+$is-rounded: true;
+
+.button {
+  @if $is-rounded {
+    border-radius: 10px;
+  }
+}
+
+//task4 
+@mixin responsive-width($max-width) {
+    max-width: $max-width;
+    margin: 0 auto;
+  }
+  
+  .container {
+    @include responsive-width(1200px);
+  }
+  
+
+//task5
+$base-color: #333;
+
+.article {
+  h1 {
+    color: $base-color;
+  }
+
+  h2 {
+    color: darken($base-color, 10%);
+  }
+
+  h3 {
+    color: darken($base-color, 20%);
+  }
+}
+
