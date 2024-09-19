@@ -1,0 +1,14 @@
+#grid{
+    display: grid;
+    grid-template-rows: 80px 80px;
+    grid-template-columns: repeat(3,120px);
+    grid-gap: 1vw;
+    color: white;
+}
+#grid > div {
+    font-size: 3vw;
+    padding: 2vw;
+    background: rgb(71, 69, 69);
+    border-radius: 5px;
+    align-content: center;
+}

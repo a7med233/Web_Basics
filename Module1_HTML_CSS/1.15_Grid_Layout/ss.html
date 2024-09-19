@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxi Booking Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F8F3D1;
+        }
+        .form-container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #EFEBD4;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+        input[type="text"], input[type="email"], input[type="datetime-local"], textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        .radio-group, .checkbox-group {
+            display: flex;
+            gap: 10px;
+        }
+        .radio-group label, .checkbox-group label {
+            display: flex;
+            align-items: center;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            width: 100%;
+            background-color: #B6A74E;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #9B8A3C;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="phone">Phone</label>
+        <input type="text" id="phone" name="phone" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label>Which taxi do you require?</label>
+        <div class="radio-group">
+            <label><input type="radio" name="taxi" value="Car" required> Car</label>
+            <label><input type="radio" name="taxi" value="Van"> Van</label>
+            <label><input type="radio" name="taxi" value="Tuk Tuk"> Tuk Tuk</label>
+        </div>
+
+        <label>Extras</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="extras" value="Baby Seat"> Baby Seat</label>
+            <label><input type="checkbox" name="extras" value="Wheelchair Access"> Wheelchair Access</label>
+            <label><input type="checkbox" name="extras" value="Stock Tip"> Stock Tip</label>
+        </div>
+
+        <label for="pickup-datetime">Pickup Date/Time</label>
+        <input type="datetime-local" id="pickup-datetime" name="pickup-datetime" required>
+
+        <label for="pickup-place">Pickup Place</label>
+        <select id="pickup-place" name="pickup-place" required>
+            <option value="">Select One</option>
+            <option value="Place 1">Place 1</option>
+            <option value="Place 2">Place 2</option>
+            <option value="Place 3">Place 3</option>
+        </select>
+
+        <label for="dropoff-place">Dropoff Place</label>
+        <input type="text" id="dropoff-place" name="dropoff-place" required>
+
+        <label for="special-instructions">Special Instructions</label>
+        <textarea id="special-instructions" name="special-instructions" rows="4"></textarea>
+
+        <button type="submit">Submit Booking</button>
+    </form>
+</div>
+
+</body>
+</html>
