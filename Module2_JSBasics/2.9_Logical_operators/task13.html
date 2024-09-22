@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 13</title>
+</head>
+<body>
+    <script>
+        let login = prompt("Who's there?");
+
+        if (login === "Admin") {
+            let password = prompt("Enter the password:");
+
+            if (password === "I am the main") {
+                alert("Hello!");
+            } else if (password === null || password === "") {
+                alert("Canceled");
+            } else {
+                alert("Incorrect password");
+            }
+        } else if (login === null || login === "") {
+            alert("Canceled");
+        } else {
+            alert("I don’t know");
+        }
+    </script>
+</body>
+</html>

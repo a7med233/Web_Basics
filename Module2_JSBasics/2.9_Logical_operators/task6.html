@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let A =2; let B=9; let C= 5;
+        if ((A < B && B < C) || (A > B && B > C) ) {
+            A *= 2;
+            B *= 2;
+            C *= 2;
+        } else {
+            let D = A;
+            A = B;
+            B = C;
+            C = D;
+        }
+
+        alert("A: " + A + ", B: " + B + ", C: " + C);
+    </script>
+</body>
+</html>
