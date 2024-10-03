@@ -1,9 +1,9 @@
-let divElement = document.getElementsByTagName('div')[0];
-console.log(divElement);
+    let divElement = document.body.firstElementChild;
+    console.log(divElement); 
 
+    let ulElement = divElement.nextElementSibling;
+    console.log(ulElement);
 
-let ulElement = document.getElementsByTagName('ul')[0];
-console.log(ulElement);
+    let secondLiElement = ulElement.lastElementChild;
+    console.log(secondLiElement); 
 
-let secondLiElement = document.getElementsByTagName('li')[1];
-console.log(secondLiElement);

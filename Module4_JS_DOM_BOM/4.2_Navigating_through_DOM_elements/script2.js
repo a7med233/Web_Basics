@@ -1,11 +1,12 @@
-function highlightDiagonal() {
-    let table = document.getElementsByTagName('table')[0];
-    let rows = table.getElementsByTagName('tr');
+let table = document.querySelector('table');
 
-    for (let i = 0; i < rows.length; i++) {
-        let cells = rows[i].getElementsByTagName('td');
-        cells[i].style.backgroundColor = 'red';
+for (let row of table.rows) {
+    let rowIndex = row.rowIndex;
+    let cells = row.cells;
+
+    for (let cell of cells) {
+        if (cell.cellIndex === rowIndex) {
+            cell.style.backgroundColor = 'red';
+        }
     }
 }
-
-highlightDiagonal();
