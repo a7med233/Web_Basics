@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  #mouse {
+    display: inline-block;
+    cursor: pointer;
+    margin: 0;
+  }
+  #mouse:focus {
+    outline: 1px dashed black;
+  }
+</style>
+</head>
+<body>
+<p>Click on the "mouse" image and move it using arrow keys.</p>
+<pre id="mouse" tabindex="0"> <!-- tabindex set to 0 to ensure focus -->
+ _   _
+(q\_/p)
+ /. .\
+=\_t_/=  __
+ /   \  (
+((   ))  )
+/\) (/\ /
+\ Y / -'
+ nn^nn
+</pre>
+
+<script>
+  const mouse = document.getElementById('mouse');
+
+  let position = { top: 100, left: 100 };
+  mouse.style.position = 'absolute';
+  mouse.style.top = position.top + 'px';
+  mouse.style.left = position.left + 'px';
+
+  mouse.addEventListener('click', () => {
+    mouse.focus();  
+  });
+
+  mouse.addEventListener('keydown', (event) => {
+    const step = 10;
+
+    switch (event.key) {
+      case 'ArrowUp':
+        position.top -= step;
+        break;
+      case 'ArrowDown':
+        position.top += step;
+        break;
+      case 'ArrowLeft':
+        position.left -= step;
+        break;
+      case 'ArrowRight':
+        position.left += step;
+        break;
+    }
+
+    mouse.style.top = position.top + 'px';
+    mouse.style.left = position.left + 'px';
+  });
+</script>
+
+</body>
+</html>
